@@ -18,6 +18,10 @@ defmodule Pusher.Router do
     get "/", PageController, :index
   end
 
+  socket "/ws", Pusher do
+    channel "stream", StreamChannel
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Pusher do
   #   pipe_through :api

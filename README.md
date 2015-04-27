@@ -9,6 +9,11 @@ run a client process:
 
 Don't really need cookie if on same machine, uses `~/.erlang.cookie` by default
 
+```
+print_node_name = fn -> IO.puts Node.self end
+Node.spawn(:"node2@machine2.com", print_node_name)
+```
+
 
 To start your new Phoenix application:
 
