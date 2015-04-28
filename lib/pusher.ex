@@ -11,6 +11,7 @@ defmodule Pusher do
       supervisor(Pusher.Endpoint, []),
       # Start the Ecto repository
       worker(Pusher.Repo, []),
+      worker(Pusher.KinesisClient, []),
       # Here you could define other workers and supervisors as children
       # worker(Pusher.Worker, [arg1, arg2, arg3]),
     ]
