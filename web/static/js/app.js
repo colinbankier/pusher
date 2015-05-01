@@ -8,9 +8,9 @@ $(function(){
   socket.connect();
   socket.join("stream", {}).receive("ok", channel => {
     console.log('joined');
-    channel.on("event", event => {
-      console.log(event);
-      url = event.payload.properties.url;
+    channel.on("event", message => {
+      console.log(message);
+      var url = message.payload.properties.url;
       stream_div.prepend('<div>This page <a href="' + url + '">' + url + '</a> was viewed.</div>');
     });
   });

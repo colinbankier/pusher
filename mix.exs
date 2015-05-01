@@ -29,10 +29,10 @@ defmodule Pusher.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [
-      {:phoenix, "~> 0.11"},
-      {:phoenix_ecto, "~> 0.3"},
+      {:phoenix, "~> 0.11.0"},
+      {:phoenix_ecto, "~> 0.3.0"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_live_reload, "~> 0.3"},
+      {:phoenix_live_reload, "~> 0.3.0"},
       {:cowboy, "~> 1.0"},
       {:amazon_kinesis_client_elixir, git: "https://github.com/colinbankier/amazon-kinesis-client-elixir", app: false}
     ]
